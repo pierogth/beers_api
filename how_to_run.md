@@ -21,4 +21,4 @@ If with your browser you go to http://localhost:8000 you can see the Home Page, 
 
 When you are logging in, you see the Token created when login in the dashboard page, in the same page you can click the button that calls internal api passing the token.
 
-After click the button, after some seconds you can see the data paginated in the searchable and sortable Table.
+Clicking the button, after some seconds you can see the data paginated in the searchable and sortable Table.
