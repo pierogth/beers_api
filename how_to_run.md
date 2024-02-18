@@ -19,6 +19,6 @@ Once you are in the container terminal, you can launch the automatic test (Unit 
 
 If with your browser you go to http://localhost:8000 you can see the Home Page, clicking register on top right of the page you can register in the system and then automatically login with the given credentials in the registration process.
 
-When you are logging in, you see the Token created when login in the dashboard page, in the same page you can click the button that calls internal api passing the token.
+When you are logged in, you see the Token created when login in the dashboard page, in the same page you can click the button that calls internal api passing the token.
 
 Clicking the button, after some seconds you can see the data paginated in the searchable and sortable Table.
