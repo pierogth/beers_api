@@ -1,0 +1,49 @@
+# Copyright VMware, Inc.
+# SPDX-License-Identifier: APACHE-2.0
+
+version: "3.7"
+
+services:
+  mariadb:
+    image: mariadb:10.4
+    ports:
+      - 3306:3306
+    restart: always
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+      ALLOW_EMPTY_PASSWORD: yes
+      MARIADB_USER: root
+      MARIADB_DATABASE: breezbeers
+    networks:
+      - app-network
+
+  myapp:
+    image: docker.io/bitnami/laravel:10
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - DB_USERNAME=root
+      - DB_PASSWORD=qwerty
+      - DB_DATABASE=breezbeers
+    networks:
+      - app-network
+    volumes:
+      - "./breezbeers:/app"
+    depends_on:
+      - mariadb
+    restart: on-failure:3
+    command: bash -c "php artisan optimize && php artisan migrate --force &&
+      npm run build && php artisan config:clear &&
+      php artisan serve --host=0.0.0.0"
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mariadb-data:
