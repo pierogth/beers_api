@@ -9,7 +9,7 @@ In order to build the app and the DB in Docker open a terminal and launch the co
 
 <code>docker compose up</code>
 
-Wait that all is built, then you can launch the test in the docker terminal of the container <b>breezbeers_docker-myapp-1<b/>
+Wait that all is built, this may take a while because Docker have to pull the two images, then you can launch the test in the docker terminal of the container <b>breezbeers_docker-myapp-1<b/>
 
 To do this, first launch <code>docker exec -it breezbeers_docker-myapp-1 sh</code> to enter in the container running the app.
 
