@@ -3,6 +3,8 @@
 In order to run this project you have to install Docker v24.0.7 (or greater) in your system
 
 ## Terminal Commands
+Clone the project with: <code>git clone https://github.com/pierogth/beers_api.git</code>
+Then go in the folder just created with: <code>cd beers_api</code>
 In order to build the app and the DB in Docker open a terminal and launch the command:
 
 <code>docker compose up</code>
