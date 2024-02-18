@@ -2,6 +2,7 @@
 ## Prerequisites
 In order to run this project you have to install Docker v24.0.7 (or greater) in your system
 
+## Terminal Commands
 In order to build the app and the DB in Docker open a terminal and launch the command:
 
 <code>docker compose up</code>
