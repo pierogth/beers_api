@@ -7,7 +7,7 @@ Clone the project with: <code>git clone https://github.com/pierogth/beers_api.gi
 Then go in the folder just created with: <code>cd beers_api</code>
 In order to build the app and the DB in Docker open a terminal and launch the command:
 
-<code>docker compose up</code>
+<code>docker compose up -d</code>
 
 Wait that all is built, this may take a while because Docker have to pull the two images, then you can launch the test in the docker terminal of the container <b>beers_api-myapp-1<b/>
 
